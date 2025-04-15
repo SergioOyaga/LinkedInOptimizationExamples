@@ -26,7 +26,7 @@ We have to represent the problem using lineal mathematical expressions.
       </td>
       <td>
         <ul>
-           <li>$B_{c, r} \in \mathbb{Z}:\{0,1}, \; \forall c \in \textcolor{blue}{C}, \; r \in \textcolor{blue}{R} =$ (Board) one implies queen and zero no queen.</li>
+           <li>$B_{c, r} \in \mathbb{Z}:\{0,1\}, \; \forall c \in \textcolor{blue}{C}, \; r \in \textcolor{blue}{R} =$ (Board) one implies queen and zero no queen.</li>
         </ul>
       </td>
    </tr>
