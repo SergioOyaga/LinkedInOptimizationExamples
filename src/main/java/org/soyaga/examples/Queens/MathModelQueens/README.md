@@ -26,7 +26,7 @@ We have to represent the problem using lineal mathematical expressions.
       </td>
       <td>
         <ul>
-           <li>$B_{c, r} \in \mathbb{Z}:\{0,1}, \; \forall c \in \textcolor{blue}{C}, \; r \in \textcolor{blue}{R} = (Board) one implies queen and zero no queen.</li>
+           <li>$B_{c, r} \in \mathbb{Z}:\{0,1}, \; \forall c \in \textcolor{blue}{C}, \; r \in \textcolor{blue}{R} =$ (Board) one implies queen and zero no queen.</li>
         </ul>
       </td>
    </tr>
@@ -61,7 +61,7 @@ We have to represent the problem using lineal mathematical expressions.
   </tr>
   <tr>
     <td><b>NoMultipleQueensInGroupColor</b></td>
-    <td>$$\ \sum_{c,r \in \\textcolor{blue}{CG_{gc}}}B_{c,r} ==1,\; \forall gc \in \textcolor{blue}{GC}$$</td>
+    <td>$$\ \sum_{c,r \in \textcolor{blue}{CG_{gc}}}B_{c,r} ==1,\; \forall gc \in \textcolor{blue}{GC}$$</td>
     <td> $|\textcolor{blue}{GC}|$ </td>
     <td> There cannot be two queens in the same color.</td>
   </tr>
