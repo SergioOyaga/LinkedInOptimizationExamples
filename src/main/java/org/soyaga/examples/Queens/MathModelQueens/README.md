@@ -101,63 +101,26 @@ We solve the problem using:
 As solver SCIP, a max time of 10 minutes and asking the solver to plot the solving info, which looks like:
 `````
 presolving:
-(round 1, fast)       96825 del vars, 268052 del conss, 0 add conss, 106569 chg bounds, 3358 chg sides, 5103 chg coeffs, 0 upgd conss, 0 impls, 224 clqs
-....
-....
-presolving (19 rounds: 19 fast, 8 medium, 7 exhaustive):
- 104114 deleted vars, 297702 deleted constraints, 40 added constraints, 126275 tightened bounds, 0 added holes, 3909 changed sides, 7835 changed coefficients
- 401 implications, 52 cliques
-presolved problem has 453 variables (361 bin, 0 int, 0 impl, 92 cont) and 818 constraints
-    296 constraints of type <varbound>
-     32 constraints of type <setppc>
-     10 constraints of type <and>
-    480 constraints of type <linear>
-Presolving Time: 1.00
-
- time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
-  1.0s|     1 |     0 |   282 |     - |   537M |   0 | 453 | 825 | 828 |   0 |  0 |   7 |   0 | 7.200000e+01 |      --      |    Inf | unknown
-  ....
-  .... 
-  1.0s|     1 |     2 |  3488 |     - |   545M |   0 | 453 | 819 |1141 | 457 | 23 |  12 |  65 | 7.200000e+01 |      --      |    Inf | unknown
-(run 1, node 1) restarting after 12 global fixings of integer variables
-
-(restart) converted 305 cuts from the global cut pool into linear constraints
-
-presolving:
-(round 1, fast)       13 del vars, 4 del conss, 0 add conss, 21 chg bounds, 122 chg sides, 239 chg coeffs, 0 upgd conss, 401 impls, 102 clqs
-(round 2, fast)       13 del vars, 4 del conss, 0 add conss, 21 chg bounds, 141 chg sides, 278 chg coeffs, 0 upgd conss, 401 impls, 102 clqs
-(round 3, exhaustive) 13 del vars, 10 del conss, 0 add conss, 21 chg bounds, 141 chg sides, 278 chg coeffs, 0 upgd conss, 401 impls, 102 clqs
-(round 4, exhaustive) 13 del vars, 10 del conss, 0 add conss, 21 chg bounds, 141 chg sides, 278 chg coeffs, 98 upgd conss, 401 impls, 102 clqs
-(round 5, medium)     13 del vars, 13 del conss, 0 add conss, 21 chg bounds, 142 chg sides, 279 chg coeffs, 98 upgd conss, 425 impls, 102 clqs
-presolving (6 rounds: 6 fast, 4 medium, 3 exhaustive):
- 13 deleted vars, 13 deleted constraints, 0 added constraints, 21 tightened bounds, 0 added holes, 142 changed sides, 279 changed coefficients
- 425 implications, 102 cliques
-presolved problem has 440 variables (348 bin, 0 int, 0 impl, 92 cont) and 1111 constraints
-    319 constraints of type <varbound>
-      1 constraints of type <knapsack>
-     77 constraints of type <setppc>
-     10 constraints of type <and>
-    674 constraints of type <linear>
-     26 constraints of type <logicor>
-      4 constraints of type <bounddisjunction>
-Presolving Time: 1.00
-
- time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
-p 1.0s|     1 |     0 |  3649 |     - |shiftand|   0 | 440 |1113 |1116 |   0 |  0 |  14 |  65 | 7.200000e+01 | 8.703030e+01 |  20.88%| unknown
- ....
- ....
-d 3.0s|    14 |    11 |  8161 | 124.5 |adaptive|   7 | 440 |1117 |1020 |   0 |  1 |  28 | 133 | 7.200000e+01 | 8.700000e+01 |  20.83%|   2.29%
-d 3.0s|    16 |    13 |  8650 | 139.5 |veclendi|   7 | 440 |1122 |1020 |   0 |  1 |  33 | 133 | 7.200000e+01 | 8.400000e+01 |  16.67%|   2.29%
-d 3.0s|    82 |    33 | 13313 |  84.1 |distribu|  23 | 440 |1156 |1019 |   0 |  1 |  68 | 133 | 7.200000e+01 | 7.500000e+01 |   4.17%|  20.73%
-  3.0s|   100 |    35 | 13496 |  70.8 |   566M |  23 | 440 |1163 |1020 |1094 |  1 |  75 | 133 | 7.200000e+01 | 7.500000e+01 |   4.17%|  23.04%
-  4.0s|   200 |    27 | 15095 |  43.4 |   567M |  23 | 440 |1081 |1019 |1371 |  1 |  91 | 133 | 7.200000e+01 | 7.500000e+01 |   4.17%|  42.12%
-  4.0s|   300 |    19 | 16808 |  34.6 |   568M |  23 | 440 |1081 |   0 |1613 |  0 |  91 | 133 | 7.200000e+01 | 7.500000e+01 |   4.17%|  60.00%
+(round 1, fast)       31 del vars, 36 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 85 clqs
+(round 2, fast)       46 del vars, 46 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 77 clqs
+(round 3, fast)       52 del vars, 53 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 77 clqs
+(round 4, medium)     54 del vars, 53 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 75 clqs
+(round 5, fast)       54 del vars, 55 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 75 clqs
+(round 6, exhaustive) 54 del vars, 74 del conss, 0 add conss, 22 chg bounds, 87 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 75 clqs
+(round 7, exhaustive) 54 del vars, 74 del conss, 0 add conss, 22 chg bounds, 87 chg sides, 0 chg coeffs, 56 upgd conss, 0 impls, 75 clqs
+(round 8, exhaustive) 114 del vars, 81 del conss, 0 add conss, 22 chg bounds, 87 chg sides, 0 chg coeffs, 56 upgd conss, 0 impls, 0 clqs
+   Deactivated symmetry handling methods, since SCIP was built without symmetry detector (SYM=none).
+presolving (9 rounds: 9 fast, 5 medium, 4 exhaustive):
+ 140 deleted vars, 130 deleted constraints, 0 added constraints, 22 tightened bounds, 0 added holes, 87 changed sides, 0 changed coefficients
+ 0 implications, 0 cliques
+transformed 1/1 original solutions to the transformed problem space
+Presolving Time: 0.00
 
 SCIP Status        : problem is solved [optimal solution found]
-Solving Time (sec) : 4.00
-Solving Nodes      : 352 (total of 353 nodes in 2 runs)
-Primal Bound       : +7.50000000000000e+01 (4 solutions)
-Dual Bound         : +7.50000000000000e+01
+Solving Time (sec) : 0.00
+Solving Nodes      : 0
+Primal Bound       : +0.00000000000000e+00 (1 solutions)
+Dual Bound         : +0.00000000000000e+00
 Gap                : 0.00 %
 `````
 
