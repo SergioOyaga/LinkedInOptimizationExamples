@@ -64,13 +64,13 @@ We have to represent the problem using lineal mathematical expressions.
   </tr>
   <tr>
     <td><b>NotThreeConsecutiveByRow</b></td>
-    <td>$$ $0 < GCT_{r,c} + GCT_{r,c+1} + GCT_{r,c+2}<3,\; \forall c \in \textcolor{blue}{C}-2$$</td>
+    <td>$$0 < GCT_{r,c} + GCT_{r,c+1} + GCT_{r,c+2}<3,\; \forall c \in \textcolor{blue}{C}-2$$</td>
     <td> $|\textcolor{blue}{C}-2|$ </td>
     <td> At most two ones every three consecutive columns, for each row.</td>
   </tr>
   <tr>
     <td><b>NotThreeConsecutiveByCol</b></td>
-    <td>$$ $0 < GCT_{r,c} + GCT_{r+1,c} + GCT_{r+2,c}<3,\; \forall r \in \textcolor{blue}{R}-2$$</td>
+    <td>$$0 < GCT_{r,c} + GCT_{r+1,c} + GCT_{r+2,c}<3,\; \forall r \in \textcolor{blue}{R}-2$$</td>
     <td> $|\textcolor{blue}{R}-2|$ </td>
     <td> At most two ones every three consecutive rows, for each column.</td>
   </tr>
