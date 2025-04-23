@@ -94,7 +94,7 @@ We have to represent the problem using lineal mathematical expressions.
   </tr>
   <tr>
     <td><b>FixedRelations</b></td>
-    <td>$$\ GCT_{r,c} == \textcolor{magenta}{CR_{r,c,1}} \and \textcolor{magenta}{CR_{r,c,2}} \and \cdot\cdot\cdot \and\textcolor{magenta}{CR_{r,c,n}},\; \forall c \in \textcolor{blue}{C}, \; \forall r \in \textcolor{blue}{R}$$</td>
+    <td>$$\ GCT_{r,c} == \textcolor{magenta}{CR_{r,c,1}} \wedge \textcolor{magenta}{CR_{r,c,2}} \wedge \cdot\cdot\cdot \wedge\textcolor{magenta}{CR_{r,c,n}},\; \forall c \in \textcolor{blue}{C}, \; \forall r \in \textcolor{blue}{R}$$</td>
     <td> $4 \cdot |\textcolor{blue}{C} \cdot \textcolor{blue}{R}|$ </td>
     <td> Follow the fixed relations between cells.</td>
   </tr>
