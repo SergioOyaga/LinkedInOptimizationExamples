@@ -23,10 +23,10 @@ We have to represent the problem using lineal mathematical expressions.
       <td>
         <ul>
            <li>
-                $\textcolor{magenta}{FCV_{fc}} \in \{0,1\} \for \{ (r, c) \mid r \in \textcolor{blue}{R}, c \in \textcolor{blue}{C}\}, \; = \textbf{(Fixed_Cell)}$ Cells type.
+                $\textcolor{magenta}{FCV_{fc}} \in \{0,1\} \for \{ (r, c) \mid r \in \textcolor{blue}{R}, c \in \textcolor{blue}{C}\}, \; = \textbf{(Fixed Cell)}$ Cells type.
            </li>
            <li>
-                $\textcolor{magenta}{CR_{r,c, i}} \in \{0,1\} \for \{ (r, c) \mid r \in \textcolor{blue}{R}, c \in \textcolor{blue}{C}, i \in N\}, \; = \textbf{(Fixed_Cell)}$ Cell relation with other.
+                $\textcolor{magenta}{CR_{r,c, i}} \in \{0,1\} \for \{ (r, c) \mid r \in \textcolor{blue}{R}, c \in \textcolor{blue}{C}, i \in N\}, \; = \textbf{(Fixed Cell)}$ Cell relation with other.
            </li>
         </ul>
       </td>
@@ -134,17 +134,11 @@ We solve the problem using:
 As solver SCIP, a max time of 10 minutes and asking the solver to plot the solving info, which looks like:
 `````
 presolving:
-(round 1, fast)       31 del vars, 36 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 85 clqs
-(round 2, fast)       46 del vars, 46 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 77 clqs
-(round 3, fast)       52 del vars, 53 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 77 clqs
-(round 4, medium)     54 del vars, 53 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 75 clqs
-(round 5, fast)       54 del vars, 55 del conss, 0 add conss, 22 chg bounds, 68 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 75 clqs
-(round 6, exhaustive) 54 del vars, 74 del conss, 0 add conss, 22 chg bounds, 87 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 75 clqs
-(round 7, exhaustive) 54 del vars, 74 del conss, 0 add conss, 22 chg bounds, 87 chg sides, 0 chg coeffs, 56 upgd conss, 0 impls, 75 clqs
-(round 8, exhaustive) 114 del vars, 81 del conss, 0 add conss, 22 chg bounds, 87 chg sides, 0 chg coeffs, 56 upgd conss, 0 impls, 0 clqs
+(round 1, fast)       30 del vars, 67 del conss, 0 add conss, 12 chg bounds, 3 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 1 clqs
+(round 2, fast)       36 del vars, 94 del conss, 0 add conss, 18 chg bounds, 4 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 0 clqs
    Deactivated symmetry handling methods, since SCIP was built without symmetry detector (SYM=none).
-presolving (9 rounds: 9 fast, 5 medium, 4 exhaustive):
- 140 deleted vars, 130 deleted constraints, 0 added constraints, 22 tightened bounds, 0 added holes, 87 changed sides, 0 changed coefficients
+presolving (3 rounds: 3 fast, 1 medium, 1 exhaustive):
+ 36 deleted vars, 96 deleted constraints, 0 added constraints, 18 tightened bounds, 0 added holes, 4 changed sides, 0 changed coefficients
  0 implications, 0 cliques
 transformed 1/1 original solutions to the transformed problem space
 Presolving Time: 0.00
