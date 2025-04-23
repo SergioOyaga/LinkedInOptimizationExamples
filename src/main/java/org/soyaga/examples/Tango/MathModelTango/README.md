@@ -23,10 +23,10 @@ We have to represent the problem using lineal mathematical expressions.
       <td>
         <ul>
            <li>
-                $\textcolor{magenta}{FCV_{fc}} \in \{0,1\} \for \{ (r, c) \mid r \in \textcolor{blue}{R}, c \in \textcolor{blue}{C}\}, \; = \textbf{(Fixed Cell)}$ Cells type.
+                $\textcolor{magenta}{FCV_{fc}} \in \{0,1\} \vee \{ (r, c) \mid r \in \textcolor{blue}{R}, c \in \textcolor{blue}{C}\}, \; = \textbf{(Fixed Cell)}$ Cells type.
            </li>
            <li>
-                $\textcolor{magenta}{CR_{r,c, i}} \in \{0,1\} \for \{ (r, c) \mid r \in \textcolor{blue}{R}, c \in \textcolor{blue}{C}, i \in N\}, \; = \textbf{(Fixed Cell)}$ Cell relation with other.
+                $\textcolor{magenta}{CR_{r,c, i}} \in \{0,1\} \vee \{ (r, c) \mid r \in \textcolor{blue}{R}, c \in \textcolor{blue}{C}, i \in N\}, \; = \textbf{(Fixed Cell)}$ Cell relation with other.
            </li>
         </ul>
       </td>
@@ -88,7 +88,7 @@ We have to represent the problem using lineal mathematical expressions.
   </tr>
   <tr>
     <td><b>FixedCells</b></td>
-    <td>$$\ GCT_{r,c} == \textcolor{magenta}{FC_{r,c}},\; \for c \in \textcolor{blue}{C}, \; \for r \in \textcolor{blue}{R}$$</td>
+    <td>$$\ GCT_{r,c} == \textcolor{magenta}{FC_{r,c}},\; \vee c \in \textcolor{blue}{C}, \; \vee r \in \textcolor{blue}{R}$$</td>
     <td> $\cdot |\textcolor{blue}{C} \cdot \textcolor{blue}{R}|$ </td>
     <td> Follow cell assignation.</td>
   </tr>
