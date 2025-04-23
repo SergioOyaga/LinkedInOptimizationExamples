@@ -88,8 +88,8 @@ We have to represent the problem using lineal mathematical expressions.
   </tr>
   <tr>
     <td><b>FixedCells</b></td>
-    <td>$$\ GCT_{r,c} == \textcolor{magenta}{FC_{r,c}},\; \vee c \in \textcolor{blue}{C}, \; \vee r \in \textcolor{blue}{R}$$</td>
-    <td> $\cdot |\textcolor{blue}{C} \cdot \textcolor{blue}{R}|$ </td>
+    <td>$$\ GCT_{r,c} == \textcolor{magenta}{FCV_{r,c}},\; \vee c \in \textcolor{blue}{C}, \; \vee r \in \textcolor{blue}{R}$$</td>
+    <td> $|\textcolor{blue}{C} \cdot \textcolor{blue}{R}|$ </td>
     <td> Follow cell assignation.</td>
   </tr>
   <tr>
