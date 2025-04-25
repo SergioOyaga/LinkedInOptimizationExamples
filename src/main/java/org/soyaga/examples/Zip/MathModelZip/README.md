@@ -71,13 +71,13 @@ We have to represent the problem using lineal mathematical expressions.
   </tr>
   <tr>
     <td><b>StartNode</b></td>
-    <td>$$GCV_{r,c} ==1,\; \vee (r,c) \in \textcolor{blue}{PC_{0}}\$$</td>
+    <td>$$GCV_{r,c} ==1,\; \vee (r,c) \in \textcolor{blue}{PC_{0}}$$</td>
     <td> $1$ </td>
     <td> The problem fixes the start node.</td>
   </tr>
   <tr>
     <td><b>EndNode</b></td>
-    <td>$$GCV_{r,c} ==\textcolor{blue}{R} \cdot \textcolor{blue}{C},\; \vee (r,c) \in \textcolor{blue}{PC_{-1}}\$$</td>
+    <td>$$GCV_{r,c} ==\textcolor{blue}{R} \cdot \textcolor{blue}{C},\; \vee (r,c) \in \textcolor{blue}{PC_{-1}}$$</td>
     <td> $1$ </td>
     <td> The problem fixes the end node.</td>
   </tr>
