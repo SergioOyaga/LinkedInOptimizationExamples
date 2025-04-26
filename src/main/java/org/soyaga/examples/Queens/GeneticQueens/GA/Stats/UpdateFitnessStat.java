@@ -60,9 +60,9 @@ public class UpdateFitnessStat implements Stat {
         this.historicalMinFitness = (this.historicalMinFitness==null || this.historicalMinFitness>fitness)? fitness : this.historicalMinFitness;
         Double mean = population.getPopulation().stream().reduce(0.,
                 (acc,val) -> acc+val.getFitnessValue(),Double::sum)/population.getPopulation().size();
-        Double sd = population.getPopulation().stream().
+        Double sd = Math.sqrt(population.getPopulation().stream().
                 reduce(0.,(acc,val) -> acc+(val.getFitnessValue()-mean)*(val.getFitnessValue()-mean),Double::sum)/
-                population.getPopulation().size();
+                population.getPopulation().size());
         ArrayList<Double> oldValue = new ArrayList<>(){{
             add(historicalMinFitness);
             add(mean);
