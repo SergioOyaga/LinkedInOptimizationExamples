@@ -198,14 +198,14 @@ public class SquareButton extends JButton {
     private String isClickNearTo(int x, int y) {
         int width = getWidth();
         int height = getHeight();
-        if((0 < x) && (abs(x) < max(10,this.thick))) return "West_Inside";
-        if((0 > x) && (abs(x) < max(10,this.thick))) return "West_Outside";
-        if ((0 < width-x) && (abs(x-width) < max(10,this.thick))) return "East_inside";
-        if ((0 < x-width) && (abs(width-x) < max(10,this.thick))) return "East_outside";
-        if((0 < y) && (abs(y) < max(10,this.thick))) return "North_inside";
-        if((0 > y) && (abs(y) < max(10,this.thick))) return "North_outside";
-        if ((0 < height-y) && (abs(y-height) < max(10,this.thick))) return "South_inside";
-        if ((0 < y-height) && (abs(height-y) < max(10,this.thick))) return "South_outside";
+        if((0 < x) && (abs(x) < max(20,this.thick))) return "West_Inside";
+        if((0 > x) && (abs(x) < max(20,this.thick))) return "West_Outside";
+        if ((0 < width-x) && (abs(x-width) < max(20,this.thick))) return "East_inside";
+        if ((0 < x-width) && (abs(width-x) < max(20,this.thick))) return "East_outside";
+        if((0 < y) && (abs(y) < max(20,this.thick))) return "North_inside";
+        if((0 > y) && (abs(y) < max(20,this.thick))) return "North_outside";
+        if ((0 < height-y) && (abs(y-height) < max(20,this.thick))) return "South_inside";
+        if ((0 < y-height) && (abs(height-y) < max(20,this.thick))) return "South_outside";
         else return "Center";
     }
 
