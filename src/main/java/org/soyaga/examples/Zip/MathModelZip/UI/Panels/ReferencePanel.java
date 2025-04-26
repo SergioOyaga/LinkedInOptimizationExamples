@@ -91,6 +91,7 @@ public class ReferencePanel extends JPanel {
      */
     @Override
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
         this.paintBorder(g);
         if (image != null) {
             g.drawImage(this.image.getScaledInstance(this.getWidth()-40, this.getHeight()-40, Image.SCALE_SMOOTH), this.getX()+20, this.getY()+20, this); // Draw the image
