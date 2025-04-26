@@ -39,7 +39,7 @@ These classes are used as main and controller.
 2. [RunLinkedInQueens](#runlinkedinQueens): The main class for instantiation of the frontend.
 
 The folders contain the problem information.
-1. [MathModel](https://github.com/SergioOyaga/LinkedInOptimizationExamples/blob/master/src/main/java/org/soyaga/examples/Queens/GeneticQueens/GA/):
+1. [GA](https://github.com/SergioOyaga/LinkedInOptimizationExamples/blob/master/src/main/java/org/soyaga/examples/Queens/GeneticQueens/GA/):
     Package with the GA model built using the OptimizationLib.mm module.
 2. [UI](https://github.com/SergioOyaga/LinkedInOptimizationExamples/blob/master/src/main/java/org/soyaga/examples/Queens/GeneticQueens/UI/):
    Package with the UI for the GA LinkedIn Queens problem.
