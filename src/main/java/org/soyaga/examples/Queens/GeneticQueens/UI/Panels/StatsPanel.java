@@ -3,7 +3,6 @@ package org.soyaga.examples.Queens.GeneticQueens.UI.Panels;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.annotations.XYAnnotation;
 import org.jfree.chart.annotations.XYTextAnnotation;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.PlotOrientation;
@@ -68,7 +67,7 @@ public class StatsPanel extends JPanel {
     public StatsPanel() {
         super();
         try {
-            this.defaultImage = ImageIO.read(Objects.requireNonNull(StatsPanel.class.getResource("/DefaultImages/Default_Math_Model_Image.png")));
+            this.defaultImage = ImageIO.read(Objects.requireNonNull(StatsPanel.class.getResource("/DefaultImages/Default_GA_Image.png")));
         } catch (IOException ex) {
             ex.printStackTrace();
         }
