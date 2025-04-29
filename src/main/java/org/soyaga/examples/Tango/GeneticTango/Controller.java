@@ -16,7 +16,7 @@ public class Controller implements PropertyChangeListener {
      */
     private final TangoGA geneticAlgorithm;
     /**
-     * TangoGAInitializer with the problem MathModel initializer.
+     * TangoGAInitializer with the problem GA initializer.
      */
     private final TangoGAInitializer tangoGAInitializer;
     /**
@@ -45,7 +45,7 @@ public class Controller implements PropertyChangeListener {
     }
 
     /**
-     * Function that subscribes the ui and the math-model to the Controller
+     * Function that subscribes the ui and the ga-model to the Controller
      */
     private void subscribeToComponents() {
         this.userInterface.addPropertyChangeListener(this);
@@ -60,19 +60,19 @@ public class Controller implements PropertyChangeListener {
     }
 
     /**
-     * Function that initializes and starts the Thread for the MathModel.
+     * Function that initializes and starts the Thread for the GaModel.
      */
     private void startGA() {
         this.userInterface.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR)); //Set the cursor to wait as the update of the world might take a while.
-        this.initializeMathModel();
+        this.initializeGAModel();
         this.backendThread.start();
         this.userInterface.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));// Set the cursor to default.
     }
 
     /**
-     * Function that sets the math model initializer.
+     * Function that sets the ga model initializer.
      */
-    private void initializeMathModel(){
+    private void initializeGAModel(){
         this.tangoGAInitializer.setRowSize(this.userInterface.getSelectedRowSize());
         this.tangoGAInitializer.setColSize(this.userInterface.getSelectedColSize());
         this.tangoGAInitializer.setFixedCells(this.userInterface.getFixedCells());

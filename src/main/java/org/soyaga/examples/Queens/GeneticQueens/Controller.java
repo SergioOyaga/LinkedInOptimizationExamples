@@ -46,7 +46,7 @@ public class Controller implements PropertyChangeListener {
     }
 
     /**
-     * Function that subscribes the ui and the math-model to the Controller
+     * Function that subscribes the ui and the ga-model to the Controller
      */
     private void subscribeToComponents() {
         this.userInterface.addPropertyChangeListener(this);
@@ -71,7 +71,7 @@ public class Controller implements PropertyChangeListener {
     }
 
     /**
-     * Function that sets the math model initializer.
+     * Function that sets the ga model initializer.
      */
     private void initializeGA(){
         this.queensGAInitializer.setColorCells(this.userInterface.getCellColors());

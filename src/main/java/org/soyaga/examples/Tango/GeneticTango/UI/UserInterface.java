@@ -51,7 +51,7 @@ public class UserInterface extends JFrame implements Runnable, ActionListener {
      * @see JComponent#getDefaultLocale
      */
     public UserInterface() throws HeadlessException {
-        super("LinkedIn Tango Problem using Mathematical Modelling");
+        super("LinkedIn Tango Problem using Genetic Algorithm");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000, 1000);
         this.composedPanel = new ComposedPanel();
