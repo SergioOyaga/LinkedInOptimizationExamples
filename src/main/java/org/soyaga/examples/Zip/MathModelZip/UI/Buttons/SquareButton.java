@@ -270,5 +270,4 @@ public class SquareButton extends JButton {
         }
         g2.dispose();
     }
-
 }
