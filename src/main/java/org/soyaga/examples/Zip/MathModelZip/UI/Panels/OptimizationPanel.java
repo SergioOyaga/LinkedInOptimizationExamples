@@ -158,7 +158,6 @@ public class OptimizationPanel extends JPanel {
         g2.dispose();
     }
 
-
     /**
      * Interpolates the segment start and end colors.
      * @param t segment percentage
@@ -198,5 +197,4 @@ public class OptimizationPanel extends JPanel {
             }
         }
     }
-
 }
