@@ -54,7 +54,7 @@ The folders contain the problem information.
    Package with the UI for the GA LinkedIn Tango problem.
 
 ### [Controller](https://github.com/SergioOyaga/LinkedInOptimizationExamples/blob/master/src/main/java/org/soyaga/examples/Tango/GeneticTango/Controller.java):
-This Class controls the communication between the UI and the math model running in the back.
+This Class controls the communication between the UI and the GA running in the back.
 
 ### [RunLinkedInTango](https://github.com/SergioOyaga/LinkedInOptimizationExamples/blob/master/src/main/java/org/soyaga/examples/Tango/GeneticTango/RunLinkedInTango.java):
 This is the main class. Is where the run starts. As simple as instantiate the UI.
