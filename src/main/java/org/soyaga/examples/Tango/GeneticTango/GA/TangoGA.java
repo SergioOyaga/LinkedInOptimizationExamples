@@ -174,7 +174,7 @@ public class TangoGA extends StatsGeneticAlgorithm implements PropertyChangeList
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         if(evt.getPropertyName().equals("solutionFound")){
-            Double timeElapsed = (System.currentTimeMillis()- this.startTime)/100.;
+            Double timeElapsed = (System.currentTimeMillis()- this.startTime)/1000.;
             ArrayList<Object> newValue = new ArrayList<>((ArrayList<Object>)evt.getNewValue());
             newValue.add(timeElapsed);
             this.pcs.firePropertyChange(evt.getPropertyName(),evt.getOldValue(),newValue );

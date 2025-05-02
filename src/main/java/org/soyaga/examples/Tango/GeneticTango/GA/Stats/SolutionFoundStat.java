@@ -16,10 +16,6 @@ public class SolutionFoundStat implements Stat {
      */
     private final ArrayList<String> header;
     /**
-     * long with the time when the solver started.
-     */
-    private Long startTime;
-    /**
      * PropertyChangeSupport object to fire events when properties of this class change.
      */
     private final PropertyChangeSupport pcs;
@@ -94,7 +90,6 @@ public class SolutionFoundStat implements Stat {
      */
     @Override
     public ArrayList<String> apply(Population population, Object... statArgs) {
-        if(this.startTime==null) this.startTime = System.currentTimeMillis();
         if(population.getBestIndividual().getFitnessValue()==0){
             if(!found){
                 ArrayList<Object> newValue = this.getNewValue(population.getBestIndividual(), (Integer) statArgs[0]);
