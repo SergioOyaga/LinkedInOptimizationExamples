@@ -209,16 +209,14 @@ public class StatsPanel extends JPanel {
         g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
         super.paintComponent(g2);
         if(this.populationSeries.getItemCount()>0 | this.individualSeries.getItemCount()>0) {
-            this.chartPanel.setVisible(true);
-            if(false) { //TODO:remove
-                String text = "Solution found in: " + " s";
-                Font bigFont = g2.getFont().deriveFont((float) (this.getWidth() / 100.));
-                g2.setFont(bigFont);
-                FontMetrics metrics = g2.getFontMetrics(bigFont);
-                int textHeight = metrics.getAscent() / 2;
-                int textWidth = metrics.stringWidth(text);
-                g2.drawString(text,this.getWidth()- textWidth - textHeight, textHeight*2);
-            }
+        this.chartPanel.setVisible(true);
+            String text = "Solution found in: " + " s";
+            Font bigFont = g2.getFont().deriveFont((float) (this.getWidth() / 100.));
+            g2.setFont(bigFont);
+            FontMetrics metrics = g2.getFontMetrics(bigFont);
+            int textHeight = metrics.getAscent() / 2;
+            int textWidth = metrics.stringWidth(text);
+            g2.drawString(text,this.getWidth()- textWidth - textHeight, textHeight*2);
         }else{
             this.chartPanel.setVisible(false);
             g2.drawImage(this.defaultImage.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH), 0, 0, this); // Draw the image
