@@ -48,7 +48,7 @@ These classes are used as main and controller.
 
 The folders contain the problem information.
 1. [GA](https://github.com/SergioOyaga/LinkedInOptimizationExamples/blob/master/src/main/java/org/soyaga/examples/Zip/GeneticZip/GA/):
-    Package with the GA model built using the OptimizationLib.mm module.
+    Package with the GA model built using the OptimizationLib.ga module.
 2. [UI](https://github.com/SergioOyaga/LinkedInOptimizationExamples/blob/master/src/main/java/org/soyaga/examples/Zip/GeneticZip/UI/):
    Package with the UI for the GA LinkedIn Zip problem.
 
