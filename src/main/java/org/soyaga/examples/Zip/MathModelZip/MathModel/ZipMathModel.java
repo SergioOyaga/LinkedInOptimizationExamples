@@ -78,7 +78,7 @@ public class ZipMathModel extends MathematicalProgrammingModel implements Runnab
              }
              row++;
         }
-        solution[0] = optimizationText;
+        solution[0] = optimizationText+"\n";
         solution[1] = result;
         return solution;
     }

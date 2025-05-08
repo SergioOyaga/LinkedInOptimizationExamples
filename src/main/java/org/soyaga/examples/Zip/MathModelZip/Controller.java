@@ -62,6 +62,7 @@ public class Controller implements PropertyChangeListener {
      */
     private void startMathModel() {
         this.userInterface.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR)); //Set the cursor to wait as the update of the world might take a while.
+        this.mathModel.clear();
         this.initializeMathModel();
         this.backendThread.start();
         this.userInterface.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));// Set the cursor to default.
