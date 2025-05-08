@@ -66,6 +66,7 @@ public class Controller implements PropertyChangeListener {
     private void startGA() {
         this.userInterface.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR)); //Set the cursor to wait as the update of the world might take a while.
         this.userInterface.clearStats();
+        this.geneticAlgorithm.clear();
         this.initializeGAModel();
         this.backendThread.start();
         this.userInterface.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));// Set the cursor to default.

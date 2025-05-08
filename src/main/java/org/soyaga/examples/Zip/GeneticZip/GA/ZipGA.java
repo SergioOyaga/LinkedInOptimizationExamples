@@ -59,7 +59,7 @@ public class ZipGA extends StatsGeneticAlgorithm implements PropertyChangeListen
                         10000                                                         // Iterations.
                 ),
                 new FixedCrossoverPolicy(                                            // Crossover Policy, fixed number.
-                        populationSize*80/100,                                       // Number of crossovers.
+                        populationSize*40/100,                                       // Number of crossovers.
                         new RandomSelection(),                                       // Parent Selection, random selection.
                         new OnePointCrossover()                                      // Crossover type, one-point crossover.
                 ),
@@ -76,7 +76,7 @@ public class ZipGA extends StatsGeneticAlgorithm implements PropertyChangeListen
                         populationSize*10/100                                       // Number of elitists.
                 ),
                 new FixedNewbornPolicy(                                             // Newborn Policy, fixed number.
-                        populationSize*10/100                                       // Number of newborns.
+                        populationSize*50/100                                       // Number of newborns.
                 ),
                 initializer,                                                        // Initializer
                 new NIterationsStatsRetrievalPolicy(                                // Stat Retrieval Policy, every N iterations.
