@@ -167,4 +167,11 @@ public class UserInterface extends JFrame implements Runnable, ActionListener {
             System.out.println("Event not handled: " +((JButton)evt.getSource()).getName());
         }
     }
+
+    /**
+     * Function that clears stats panel
+     */
+    public void clearStats() {
+        this.composedPanel.clearStats();
+    }
 }

@@ -55,11 +55,15 @@ public class StatsPanel extends JPanel {
     /**
      * XYTextAnnotation with the solution time.
      */
-    private XYTextAnnotation annotation;
+    private final XYTextAnnotation annotation;
     /**
      * Double with the max fitness
      */
     private Double maxFitness;
+    /**
+     * ValueMarker for the solution.
+     */
+    private final ValueMarker marker;
 
     /**
      * Constructor
@@ -87,6 +91,8 @@ public class StatsPanel extends JPanel {
         );
         this.fitnessRenderer = getDeviationRenderer();
         this.chartPanel = new ChartPanel(this.bestIndividualFitnessChart);
+        this.marker = new ValueMarker(0);
+        this.annotation = new XYTextAnnotation("", 0, 0);
     }
 
     /**
@@ -172,7 +178,7 @@ public class StatsPanel extends JPanel {
             this.maxFitness = Math.max(this.maxFitness, populationMeanFitness+populationStandardDeviation);
         }
         if(this.annotation !=null) {
-            this.annotation.setX(iteration*0.8);
+            this.annotation.setX(iteration*0.9);
             this.annotation.setY(this.maxFitness);
         }
         this.repaint();
@@ -185,18 +191,17 @@ public class StatsPanel extends JPanel {
      */
     public void addSolutionFound(double iteration, double time){
         time = ((int)(time*100.))/100.;
-        ValueMarker marker = new ValueMarker(iteration);
-        marker.setStroke(new BasicStroke(4));
-        marker.setPaint(Color.RED);
-        marker.setLabelFont(this.getFont().deriveFont(16.F));
-        marker.setLabelOffset(new RectangleInsets(16., 0., 0., 0.));
-        marker.setLabelPaint(Color.WHITE);
-        marker.setLabel("Solution found");
-        ((XYPlot) this.bestIndividualFitnessChart.getPlot()).addDomainMarker(marker);
-        this.annotation = new XYTextAnnotation("Solution found in: " + time + " s", 0, 0);
+        this.marker.setValue(iteration);
+        this.marker.setStroke(new BasicStroke(4));
+        this.marker.setPaint(Color.RED);
+        this.marker.setLabelFont(this.getFont().deriveFont(16.F));
+        this.marker.setLabelOffset(new RectangleInsets(16., 0., 0., 0.));
+        this.marker.setLabelPaint(Color.WHITE);
+        this.marker.setLabel("Solution found");
+        ((XYPlot) this.bestIndividualFitnessChart.getPlot()).addDomainMarker(this.marker);
+        this.annotation.setText("Solution found in: " + time + " s");
         this.annotation.setPaint(Color.GREEN);
-        this.annotation.setFont(this.getFont().deriveFont(16.F));
-        ((XYPlot) this.bestIndividualFitnessChart.getPlot()).addAnnotation(annotation);
+        ((XYPlot) this.bestIndividualFitnessChart.getPlot()).addAnnotation(this.annotation);
     }
 
     /**
@@ -210,16 +215,22 @@ public class StatsPanel extends JPanel {
         super.paintComponent(g2);
         if(this.populationSeries.getItemCount()>0 | this.individualSeries.getItemCount()>0) {
         this.chartPanel.setVisible(true);
-            String text = "Solution found in: " + " s";
-            Font bigFont = g2.getFont().deriveFont((float) (this.getWidth() / 100.));
+            Font bigFont = g2.getFont().deriveFont((float) (Math.min(this.getWidth(), this.getHeight()) / 20.));
             g2.setFont(bigFont);
-            FontMetrics metrics = g2.getFontMetrics(bigFont);
-            int textHeight = metrics.getAscent() / 2;
-            int textWidth = metrics.stringWidth(text);
-            g2.drawString(text,this.getWidth()- textWidth - textHeight, textHeight*2);
+            this.annotation.setFont(bigFont);
         }else{
             this.chartPanel.setVisible(false);
             g2.drawImage(this.defaultImage.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH), 0, 0, this); // Draw the image
         }
+    }
+
+    /**
+     * Function that clears stats panel
+     */
+    public void clearStats() {
+        this.populationSeries.clear();
+        this.individualSeries.clear();
+        ((XYPlot) this.bestIndividualFitnessChart.getPlot()).removeAnnotation(this.annotation);
+        ((XYPlot) this.bestIndividualFitnessChart.getPlot()).removeDomainMarker(this.marker);
     }
 }

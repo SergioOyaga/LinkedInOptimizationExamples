@@ -37,23 +37,23 @@ public class OptimizationPanel extends JPanel {
     /**
      * Color to start the draw
      */
-    private final Color startColor;
+    private Color startColor;
     /**
      * Color to end the draw
      */
-    private final Color endColor;
+    private Color endColor;
     /**
      * Int with the red distance
      */
-    private final int redDistance;
+    private int redDistance;
     /**
      * Int with the green distance
      */
-    private final int greenDistance;
+    private int greenDistance;
     /**
      * Int with the blue distance
      */
-    private final int blueDistance;
+    private int blueDistance;
     /**
      * Integer with the number of segments to draw
      */
@@ -68,11 +68,6 @@ public class OptimizationPanel extends JPanel {
         super();
         this.solutionArray = new ArrayList<>();
         this.isSolved = false;
-        this.startColor = new Color((int) (random()*255), (int) (random()*255), (int) (random()*255));
-        this.endColor = new Color((int) (random()*255), (int) (random()*255), (int) (random()*255));
-        this.redDistance = (this.endColor.getRed() - this.startColor.getRed());
-        this.greenDistance = (this.endColor.getGreen() - this.startColor.getGreen());
-        this.blueDistance = (this.endColor.getBlue() - this.startColor.getBlue());
     }
 
     /**
@@ -113,6 +108,11 @@ public class OptimizationPanel extends JPanel {
      * @param solution ArrayList with the solution.
      */
     public void setSolution(ArrayList<SquareButton> solution){
+        this.startColor = new Color((int) (random()*255), (int) (random()*255), (int) (random()*255));
+        this.endColor = new Color((int) (random()*255), (int) (random()*255), (int) (random()*255));
+        this.redDistance = (this.endColor.getRed() - this.startColor.getRed());
+        this.greenDistance = (this.endColor.getGreen() - this.startColor.getGreen());
+        this.blueDistance = (this.endColor.getBlue() - this.startColor.getBlue());
         for(int i=0; i<solution.size();i++){
             solution.get(i).setOrder(i);
         }

@@ -84,4 +84,11 @@ public class ComposedPanel extends JSplitPane {
     public void disableColTextField(){
         this.controlPanel.disableColTextField();
     }
+
+    /**
+     * Function that clears stats panel
+     */
+    public void clearStats() {
+        this.statsPanel.clearStats();
+    }
 }

@@ -1,5 +1,6 @@
 package org.soyaga.examples.Zip.GeneticZip.GA.Stats;
 
+import lombok.Setter;
 import org.soyaga.examples.Zip.GeneticZip.GA.ZipGA;
 import org.soyaga.examples.Zip.GeneticZip.UI.Buttons.SquareButton;
 import org.soyaga.ga.GeneticInformationContainer.Genome.ArrayListGenome;
@@ -23,6 +24,7 @@ public class SolutionFoundStat implements Stat {
     /**
      * Flag that controls whether the solution has already been found.
      */
+    @Setter
     private boolean found;
 
 

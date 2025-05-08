@@ -56,7 +56,7 @@ public class ZipGA extends StatsGeneticAlgorithm implements PropertyChangeListen
         super(ID,
                 populationSize,
                 new MaxIterationCriteriaPolicy(                                      // Stopping criteria, max iterations.
-                        1000                                                         // Iterations.
+                        10000                                                         // Iterations.
                 ),
                 new FixedCrossoverPolicy(                                            // Crossover Policy, fixed number.
                         populationSize*80/100,                                       // Number of crossovers.
@@ -66,9 +66,9 @@ public class ZipGA extends StatsGeneticAlgorithm implements PropertyChangeListen
                 new ByLevelSingleProbMutPolicy(                                      // Mutation Policy, single prob.
                     new ArrayList<>(){{                                              // Mutation Levels. Only one level (Genome).
                         add(new ArrayList<>(){{                                      // Array of mutation at Genome level.
-                            add(new GenericSwapMutation(1));}});         // Mutation to apply at Genome level.
+                            add(new GenericSwapMutation(6));}});         // Mutation to apply at Genome level.
                     }},
-                    0.2,                                                 // Mutation probability.
+                    0.05,                                                 // Mutation probability.
                     false,                                                          // Hash To shuffle levels.
                     false                                                           // Hash To shuffle Mutations.
                 ),
@@ -167,6 +167,7 @@ public class ZipGA extends StatsGeneticAlgorithm implements PropertyChangeListen
         try {
             this.startTime =System.currentTimeMillis();
             this.optimize();
+            this.solutionFound.setFound(false);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

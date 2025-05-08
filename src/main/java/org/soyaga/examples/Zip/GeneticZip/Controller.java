@@ -39,7 +39,7 @@ public class Controller implements PropertyChangeListener {
     public Controller() throws IOException {
         this.userInterface = new UserInterface();
         this.zipGAInitializer = new ZipGAInitializer();
-        this.geneticAlgorithm = new ZipGA("ZipGA", this.zipGAInitializer, 1000);
+        this.geneticAlgorithm = new ZipGA("ZipGA", this.zipGAInitializer, 100);
         this.frontendThread = new Thread(this.userInterface);// Frontend Thread.
         this.backendThread = new Thread(this.geneticAlgorithm); // Backend Thread.
         this.subscribeToComponents();
@@ -65,6 +65,7 @@ public class Controller implements PropertyChangeListener {
      */
     private void startGA() {
         this.userInterface.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR)); //Set the cursor to wait as the update of the world might take a while.
+        this.userInterface.clearStats();
         this.initializeGAModel();
         this.backendThread.start();
         this.userInterface.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));// Set the cursor to default.
