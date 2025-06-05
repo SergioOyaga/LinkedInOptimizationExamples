@@ -132,8 +132,7 @@ public class Controller implements PropertyChangeListener {
                                 2.,                                        //Double with the ants' Alpha (>0) parameter (importance of the edges pheromones against the edges "distances").
                                 0.                                         //Double with the ants' Beta (>0) parameter (importance of the edges "distances" against the edges pheromones).
                         ),                                                 //
-                        100.//,                                              //Double with the amount of pheromone each ant can deposit in its track (same order of the problem optimal fitness).
-                        //0.001                                               //Double with the percentage eaten by each ant.
+                        100.                                               //Double with the amount of pheromone each ant can deposit in its track (same order of the problem optimal fitness).
                 ),
                 50                                                         //Integer with the initial number of ants.
         );
